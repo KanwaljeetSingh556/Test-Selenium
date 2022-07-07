@@ -44,6 +44,7 @@ public class NegativePasswordTest
 		String expectedText = error.getText();
 		Assert.assertEquals(expectedText, "Your password is invalid!");
 		System.out.println("assertion complete");
+		System.out.println("assertion completed");
 		
 	}
 
