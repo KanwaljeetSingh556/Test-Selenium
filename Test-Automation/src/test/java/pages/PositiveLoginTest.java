@@ -35,7 +35,7 @@ public class PositiveLoginTest
 		
 	    read = new ReadProperties("Test-Data/PositiveLogin.properties");
 		 bs = new BasePageObject(driver);
-		 driver.manage().window().maximize();
+	 driver.manage().window().maximize();
 	}
 	
 	
@@ -43,16 +43,17 @@ public class PositiveLoginTest
 
 
 	@Before
-	public void PositiveLogin()
+	public boolean PositiveLogin()
 	{
 	bs.openUrl(read.readData("URL"));
 	bs.find(usernameLocator).sendKeys(read.readData("username"));
 	bs.find(passwordLocator).sendKeys(read.readData("password"));
 	bs.find(submitButtonLocator).click();	
+	return true;
 	}
 	
 	@Test
-	public void VerifyPositiveLogin() 
+	public boolean VerifyPositiveLogin() 
 	{
 		WebElement LogoutLocator = bs.find(By.linkText("Log out"));
 		 WebElement verify  =  bs.find(By.xpath("//strong")); 
@@ -68,6 +69,9 @@ public class PositiveLoginTest
 	      System.out.println("AssertionComplete");
 	      
 	      bs.click(By.linkText("Log out"));
+	      
+	      return true;
+	      
 	      
 	       
        
