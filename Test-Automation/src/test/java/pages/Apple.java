@@ -52,15 +52,15 @@ public class Apple
 			Assert.assertEquals(ExpectedTittle,driver.getTitle());
 		String source = driver.getPageSource();
 		//System.out.println(source);
-		ac.moveToElement(bp.find(By.xpath("//a[.='Buy' and contains(@class,'button-reduced') and @data-analytics-title='buy - iphone 12' ]"))).click().perform();
+		//ac.moveToElement(bp.find(By.xpath("//a[.='Buy' and contains(@class,'button-reduced') and @data-analytics-title='buy - iphone 12' ]"))).click().perform();
 		
 		
 			
 		}
 		
-		String ExpectedTittle2 = "Buy iPhone 12 and iPhone 12 mini Unlocked - Apple (IN)";
-		Assert.assertEquals(ExpectedTittle2,driver.getTitle());
-		System.out.println("Assertion  Completed");
+// 		String ExpectedTittle2 = "Buy iPhone 12 and iPhone 12 mini Unlocked - Apple (IN)";
+// 		Assert.assertEquals(ExpectedTittle2,driver.getTitle());
+// 		System.out.println("Assertion  Completed");
 		return true;
 		
 		
