@@ -60,7 +60,7 @@ public class Apple
 		}
 		
 		String ExpectedTittle2 = "Buy iPhone 12 and iPhone 12 mini Unlocked - Apple (IN)";
-		Assert.assertEquals(ExpectedTittle,driver.getTitle());
+		Assert.assertEquals(ExpectedTittle2,driver.getTitle());
 		System.out.println("Assertion  Completed");
 		return true;
 		
