@@ -5,11 +5,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-import org.junit.After;
-import org.junit.Test;
+//import org.junit.After;
+//import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
-//import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -76,7 +76,7 @@ public class TestBatches
 	
 	
 	
-	@After
+	@AfterTest
 	public void quitm()
 	{
 		extent.endTest(parent);
