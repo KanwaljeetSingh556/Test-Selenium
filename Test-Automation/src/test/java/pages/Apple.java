@@ -52,7 +52,7 @@ public class Apple
 		{
 			Assert.assertEquals(ExpectedTittle,driver.getTitle());
 		String source = driver.getPageSource();
-		System.out.println(source);
+		//System.out.println(source);
 		ac.moveToElement(bp.find(By.xpath("//a[.='Buy' and contains(@class,'button-reduced') and @data-analytics-title='buy - iphone 12' ]"))).click().perform();
 		
 		
