@@ -5,10 +5,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-//import org.junit.After;
+import org.junit.After;
 //import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -24,11 +26,14 @@ public class TestBatches
 	public static ExtentReports extent;
 	public static ExtentTest  parent;
 	String root;
+	
+//	@Parameters("BrowserName")
+//	@BeforeTest
 	public TestBatches() 
 	{
 		
 		DriverSetUp ds = new DriverSetUp();
-		WebDriver driver = ds.getLocalDriver();
+		WebDriver driver = ds.GridDriver();
 		 test = new TestCases(driver);
 	
 			int ran = new Random().nextInt(9999);
@@ -44,6 +49,7 @@ public class TestBatches
 		
 		
 	}
+	
 	
 @Test
 	public void TestBatch1() 

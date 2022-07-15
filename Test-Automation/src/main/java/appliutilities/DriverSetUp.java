@@ -11,6 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Parameters;
 
 import gUtilities.ReadProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -74,6 +75,9 @@ public class DriverSetUp {
 		return driver;
 	}
 	
+    
+	
+     @Parameters("Browser")
 	public WebDriver getLocalDriver() {
 		if(config.readData("Browser").equalsIgnoreCase("CHROME")){
 			  WebDriverManager.chromedriver().setup();
@@ -100,6 +104,33 @@ public class DriverSetUp {
 		}
 		return driver;
 	}
+     
+     
+ 	public WebDriver getLocalDriver2(String Browser) {
+ 		if(Browser.equalsIgnoreCase("CHROME")){
+ 			  WebDriverManager.chromedriver().setup();
+ 			     driver = new ChromeDriver();
+ 			
+ 		}
+ 		else if(Browser.equalsIgnoreCase("MSEDGE")) {
+ 			
+            WebDriverManager.edgedriver().setup();
+ 			driver = new EdgeDriver();
+ 					
+ 		}
+ 		
+ 		else {
+ 			if(Browser.equalsIgnoreCase("CHROME")){
+ 				System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
+
+ 				driver = new ChromeDriver();
+ 				
+ 			}
+ 			
+ 			
+ 		}
+ 		return driver;
+ 	}
 	
 	public WebDriver GridDriver()
 	{

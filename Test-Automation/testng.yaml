@@ -1,0 +1,6 @@
+name: Suite
+configFailurePolicy: skip
+tests:
+  - name: Test
+  parameters: { Browser: chrome }
+
