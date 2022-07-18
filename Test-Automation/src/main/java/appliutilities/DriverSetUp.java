@@ -77,7 +77,7 @@ public class DriverSetUp {
 	
     
 	
-     @Parameters("Browser")
+
 	public WebDriver getLocalDriver() {
 		if(config.readData("Browser").equalsIgnoreCase("CHROME")){
 			  WebDriverManager.chromedriver().setup();
