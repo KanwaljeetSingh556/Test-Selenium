@@ -107,31 +107,9 @@ public class DriverSetUp {
 	}
      
      
- 	public WebDriver getLocalDriver2(String Browser) {
- 		if(Browser.equalsIgnoreCase("CHROME")){
- 			  WebDriverManager.chromedriver().setup();
- 			     driver = new ChromeDriver();
- 			
- 		}
- 		else if(Browser.equalsIgnoreCase("MSEDGE")) {
- 			
-            WebDriverManager.edgedriver().setup();
- 			driver = new EdgeDriver();
- 					
- 		}
+ 	
  		
- 		else {
- 			if(Browser.equalsIgnoreCase("CHROME")){
- 				System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
-
- 				driver = new ChromeDriver();
- 				
- 			}
- 			
- 			
- 		}
- 		return driver;
- 	}
+ 	
 	
 	public WebDriver GridDriver()
 	{
