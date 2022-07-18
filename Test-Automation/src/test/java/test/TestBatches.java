@@ -33,7 +33,7 @@ public class TestBatches
 	{
 		
 		DriverSetUp ds = new DriverSetUp();
-		WebDriver driver = ds.GridDriver();
+		WebDriver driver = ds.getLocalDriver();
 		 test = new TestCases(driver);
 	
 			int ran = new Random().nextInt(9999);
