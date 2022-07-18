@@ -2,7 +2,7 @@ package appliutilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-//import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.Platform;
