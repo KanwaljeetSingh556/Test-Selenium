@@ -95,9 +95,9 @@ public class DriverSetUp {
 		
 		else {
 			if(config.readData("Browser").equalsIgnoreCase("CHROME")){
-				System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
-
-				driver = new ChromeDriver();
+				 WebDriverManager.chromedriver().setup();
+			         driver = new ChromeDriver();
+			
 				
 			}
 			
